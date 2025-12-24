@@ -38,7 +38,7 @@ jobs:
       - name: Prepare environment variables
         run: |
           echo "SHORT_SHA=`git rev-parse --short HEAD`" >> $GITHUB_ENV
-          echo "APP_VERSION=`node -p "require('./loader/package.json').version"`" >> $GITHUB_ENV
+          echo "APP_VERSION=$(node -p 'require(\"./loader/package.json\").version')" >> $GITHUB_ENV
 
       - name: Setup MSBuild
         if: runner.os == 'Windows'
