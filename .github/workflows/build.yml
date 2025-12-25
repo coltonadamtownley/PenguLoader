@@ -4,6 +4,7 @@ on:
       - main
       - dev
       - release/*
+      - refactor-2
   workflow_dispatch:
 
 jobs:
